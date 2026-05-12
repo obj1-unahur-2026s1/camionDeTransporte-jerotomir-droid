@@ -1,9 +1,17 @@
+import cosas2.*
 import cosas.*
 
-describe "group of test for cosas" {
+describe "cosas" {
 
-  test "first test" {
-    assert.that(true)
+  test "el paquete tiene 1o ladrillos, debe pesar 20" {
+    assert.equals(20, ladrillos.peso())
   }
-
+   test "la bateria tiene misiles, su peligro es 100" {
+    assert.equals(100, bateriaAntiárea.peligro())
+  }
+   test "el contenedor tiene adentro a knightRider y bumblebee, se peso va a ser 1400" {
+    contenedorPortunario.agregarCosas(bumblebee)
+    contenedorPortunario.agregarCosas(knightRider)
+    assert.equals(1400, contenedorPortunario.peso())
+  }
 }

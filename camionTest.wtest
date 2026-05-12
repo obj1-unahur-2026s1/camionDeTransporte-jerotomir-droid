@@ -2,7 +2,7 @@ import camion.*
 
 describe "group of test for camion" {
 
-  test "first test" {
+  test "carga con bumblebee en modo robot " {
     assert.that(true)
   }
 

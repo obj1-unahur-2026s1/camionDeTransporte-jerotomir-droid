@@ -49,7 +49,7 @@ object bateriaAntiárea{
 }
 object contenedorPortunario{
   const cosas = []
-  method agregarCosas(cosa) {
+    method agregarCosas(cosa) {
     cosas.add(cosa)
   }
   method peso() {

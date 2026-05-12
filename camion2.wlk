@@ -15,7 +15,7 @@ method cosasMasPeligrosasQue(cosa) {carga.filter({c => c.peligro() > cosa.peligr
 method elCamionEstaExcedidoDePeso() {return self.pesoDelCamion() > 2500} 
 method hayPeligro(nivelPeligro) {return carga.any({c => c.peligro() > nivelPeligro}) }
 method puedeCircularEnRuta(nivelPeligro) {
-    return not self.elCamionEstaExcedidoDePeso() and not self.hayPeligro(nivelPeligro)} 
+    return not self.elCamionEstaExcedidoDePeso() and not self.hayPeligro(nivelPeligro)}  
 method cosaEntre(peso1,peso2){carga.any({c => c.peso().between(peso1, peso2)})}
 method cosaMasPesada() {return carga.find({c => c.peso() == carga.map({c => c.peso()}).max()})}
 }
