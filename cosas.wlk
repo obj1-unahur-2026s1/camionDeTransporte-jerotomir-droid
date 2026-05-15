@@ -47,6 +47,12 @@ object bateriaAntiárea{
     return 0}
   } 
 }
+object residuos {
+  var peso = 0
+  method nuevoPeso(nuevoPeso) { peso = nuevoPeso} 
+  method peso() = peso 
+  method peligrosidad() = 200 
+}
 object contenedorPortunario{
   const cosas = []
   method agregarCosas(cosa) {

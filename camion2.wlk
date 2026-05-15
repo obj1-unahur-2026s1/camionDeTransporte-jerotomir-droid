@@ -1,11 +1,15 @@
 import cosas.*
 object camion {
+method cantidadBultos() = carga.sum({c => c.espacioBulto()}) 
 const carga = []
 method tara() = 1000
 method pesoDelCamion() {
-  return carga.map({c => c.peso()}).sum() + self.tara()
+  return carga.sum({c => c.peso()}) + self.tara()
 }
-method AgregarCosa(cosa) {carga.add(cosa)}
+method AgregarCosa(cosa) {
+carga.add(cosa)
+cosa.cambiar()
+}
 method SacarCosa(cosa) {carga.remove(cosa)}
 method sonTodosLosPesosPares(){carga.all({c => c.peso().even()})}
 method algoPesa(peso) {carga.any({c => c.peso() == peso})} 

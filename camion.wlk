@@ -3,7 +3,7 @@ object camion {
 const carga = []
 method tara() = 1000
 method pesoDelCamion() {
-  return carga.map({c => c.peso()}).sum() + self.tara()
+  return carga.sum({c => c.peso()}) + self.tara()
 }
 method AgregarCosa(cosa) {carga.add(cosa)}
 method SacarCosa(cosa) {carga.remove(cosa)}
